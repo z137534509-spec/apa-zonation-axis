@@ -1,0 +1,19 @@
+# Raw and derived research data
+data/raw/*
+data/processed/*
+!data/README.md
+
+# Generated analyses (retain only selected release tables)
+results/*
+!results/README.md
+!results/release_tables/
+!results/release_tables/**
+
+# Runtime and editor files
+logs/
+__pycache__/
+*.py[cod]
+.Rhistory
+.RData
+.DS_Store
+Thumbs.db

@@ -1,0 +1,4 @@
+﻿analysis,unit_preserved,observed_mean_delta,two_sided_p,greater_p,interpretation
+Exact patient-paired section sign-flip null,patient pair / section mean,0.5934635282060104,0.015625,0.0078125,Primary inference does not rely on parametric t test.
+Within-patient spot-label null,patient pair; original APA/adjacent spot counts,0.5934635282060104,0.0001999600079984003,0.0001999600079984003,Spot-level distributions are not exchangeable within patient pairs.
+Spatial block-label null,within-section spatial blocks aggregated before permutation,0.5934635282060104,0.0001999600079984003,0.0001999600079984003,The paired signal exceeds a local-spatial-block label randomization.

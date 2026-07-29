@@ -1,0 +1,11 @@
+R==4.5.1
+Bioconductor==3.22
+Seurat==5.4.0
+SingleCellExperiment==1.32.0
+SummarizedExperiment==1.40.0
+SpatialExperiment==1.20.0
+scater==1.38.1
+scran==1.38.1
+spacexr==1.2.0
+SPOTlight==1.14.0
+CARDspa==1.2.1
