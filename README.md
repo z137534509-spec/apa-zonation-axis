@@ -1,6 +1,6 @@
 # APA zonation-axis spatial transcriptomics
 
-Reproducibility code for the study "Patient-paired spatial transcriptomics reveals a shared aldosterone-oriented shift along the adrenal zonation axis in aldosterone-producing adenomas".
+Reproducibility code for the study "Patient-paired spatial transcriptomics reveals a shared aldosterone-oriented zonation shift in aldosterone-producing adenomas".
 
 ## Scope
 
