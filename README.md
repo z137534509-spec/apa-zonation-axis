@@ -16,13 +16,13 @@ The current BMC revision also evaluates spatial score distribution at 3×3, 4×4
 | --- | --- | --- |
 | GSE274314 | Primary paired Visium analysis | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE274314 |
 | GSE60042 | Independent paired expression cohort | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE60042 |
-| GSE60043 | Supplementary promoter-methylation context | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE60043 |
-| GSE64957 | Normal ZG/ZF calibration | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE64957 |
 | GSE156931 | Processed-matrix paired external support | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE156931 |
 | Zenodo 18128100 | Normal-adrenal single-nucleus reference | https://zenodo.org/records/18128100 |
 | Zenodo 10560526 | Normal-adrenal spatial reference | https://zenodo.org/records/10560526 |
 
 Place downloaded inputs under `data/raw/` and required derived inputs under `data/processed/`; both locations are ignored by Git.
+
+Legacy exploratory scripts that mention GSE60043 or GSE64957 are retained for provenance only. Those datasets and their outputs are not part of the BMC Genomics analysis, release tables, or manuscript claims.
 
 ## Environment
 
@@ -30,12 +30,11 @@ The BMC revision was run with Python 3.12.10, numpy 2.3.5, pandas 2.3.3, scipy 1
 
 ## Analysis order
 
-1. Run `scripts/20_stage2_zonation_axis_strengthening.py` for the primary spatial module scores and robustness outputs.
-2. Run `scripts/25_computational_only_defense.py` for patient-level inference robustness.
-3. Run `scripts/26_external_transcriptome_methylome_validation.py` for the GSE60042 cohort and methylation context.
-4. Run `scripts/51_bmc_gse156931_and_spatial_dispersion.py` for the four-module BMC score, GSE156931 external support, exact sign-flip testing, and 3×3/4×4/5×5 spatial-dispersion sensitivity.
+1. Run `scripts/20_stage2_zonation_axis_strengthening.py` to create the retained spatial score input from GSE274314.
+2. Run `scripts/26_external_transcriptome_methylome_validation.py` to prepare the GSE60042 score input. Its GSE60043 methylation routines are legacy and are excluded from the BMC analysis.
+3. Run `scripts/51_bmc_gse156931_and_spatial_dispersion.py` for the four-module BMC score, GSE156931 external support, exact sign-flip testing, and 3×3/4×4/5×5 spatial-dispersion sensitivity.
 
-The newer BMC script reads the outputs of steps 1 and 3. It reports descriptive paired bootstrap intervals and uses an exact two-sided sign-flip test that enumerates all `2^n` signed versions of the observed paired differences; it is not a binomial sign test.
+The BMC script reads the outputs of steps 1 and 2. It reports descriptive paired bootstrap intervals and uses an exact two-sided sign-flip test that enumerates all possible sign assignments of the observed paired differences; it is not a binomial sign test.
 
 ## Release tables
 

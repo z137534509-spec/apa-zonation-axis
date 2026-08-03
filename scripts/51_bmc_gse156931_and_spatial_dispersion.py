@@ -503,7 +503,7 @@ def write_report(gse156_meta: pd.DataFrame, gse156_tests: pd.DataFrame, section_
         "",
         f"- Identifiable APA/AAG pairs: {int(gse156_meta['paired_apa_aag'].sum() / 2)}; paired samples: {int(gse156_meta['paired_apa_aag'].sum())}.",
         "- The reference-defined axis is the mean of the aldosterone-oriented ZG and intermediate modules minus the mean of the cortisol-oriented ZF and androgen-oriented ZR modules.",
-        "- Bootstrap 95% intervals are descriptive summaries of the paired mean. Primary inference uses an exact two-sided sign-flip test across all 2^n sign assignments of the observed paired differences; this is not a binomial sign test.",
+        "- Bootstrap 95% intervals are descriptive summaries of the paired mean. Primary inference uses an exact two-sided sign-flip test across all possible sign assignments of the observed paired differences; this is not a binomial sign test.",
         f"- Primary axis: mean APA-AAG difference {primary['mean_delta']:.4f}; descriptive bootstrap 95% CI {primary['ci95_low']:.4f} to {primary['ci95_high']:.4f}; {int(primary['n_positive'])}/{int(primary['n_pairs'])} pairs positive; exact two-sided sign-flip P={primary['exact_sign_flip_two_sided_p']:.5f}.",
         f"- CYP11B2-free sensitivity: mean APA-AAG difference {cyp_free['mean_delta']:.4f}; descriptive bootstrap 95% CI {cyp_free['ci95_low']:.4f} to {cyp_free['ci95_high']:.4f}; {int(cyp_free['n_positive'])}/{int(cyp_free['n_pairs'])} pairs positive; exact two-sided sign-flip P={cyp_free['exact_sign_flip_two_sided_p']:.5f}.",
         "",
@@ -520,7 +520,7 @@ def write_report(gse156_meta: pd.DataFrame, gse156_tests: pd.DataFrame, section_
         "",
         "## Writing rule",
         "",
-        "GSE156931 is directionally concordant but does not meet the two-sided exact paired threshold; report it as independent directional support, not definitive third-cohort confirmation. The seven spatial-heterogeneity endpoints are the raw spot-score IQR, median absolute deviation, 90th-minus-10th percentile range, block-median IQR at 3×3, 4×4, and 5×5 grids, and Moran's I. Location endpoints are not part of this FDR family. Report regional dispersion only when its direction is stable across grid resolutions, and note that lower lesion-level dispersion can reflect replacement of normally layered ZG-ZF-ZR cortex rather than intrinsic APA homogenization.",
+        "GSE156931 is directionally concordant in seven of eight pairs and reaches the exact paired threshold for the primary axis, but its processed-matrix-only availability and modest sample size mean that it should be interpreted as independent directional support rather than pooled with the other cohorts. The seven spatial-heterogeneity endpoints are the raw spot-score IQR, median absolute deviation, 90th-minus-10th percentile range, block-median IQR at 3×3, 4×4, and 5×5 grids, and Moran's I. Location endpoints are not part of this FDR family. Report regional dispersion only when its direction is stable across grid resolutions, and note that lower lesion-level dispersion can reflect replacement of normally layered ZG-ZF-ZR cortex rather than intrinsic APA homogenization.",
     ]
     (RESULTS / "bmc_revision_validation_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
