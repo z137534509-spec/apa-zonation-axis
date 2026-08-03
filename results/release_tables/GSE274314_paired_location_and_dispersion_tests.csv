@@ -1,0 +1,11 @@
+﻿metric,endpoint_family,comparison,n_pairs,mean_delta,median_delta,ci95_low,ci95_high,n_positive,n_negative,exact_sign_flip_two_sided_p,exact_sign_flip_greater_p,wilcoxon_p,fdr_family,exact_sign_flip_two_sided_fdr
+axis_mean,location,APA vs adjacent cortex,7,0.609957065321253,0.5294103984900123,0.383319617180213,0.9149107313729669,7,0,0.015625,0.0078125,0.015625,not adjusted (location endpoints),
+axis_median,location,APA vs adjacent cortex,7,0.6161713234575882,0.5009300694889268,0.37622706628825975,0.9395251535816816,7,0,0.015625,0.0078125,0.015625,not adjusted (location endpoints),
+axis_mean_CYP11B2_free,location,APA vs adjacent cortex,7,0.5608856277799265,0.4767852617170969,0.34279933572865257,0.8531383249907986,7,0,0.015625,0.0078125,0.015625,not adjusted (location endpoints),
+axis_iqr,spatial_heterogeneity,APA vs adjacent cortex,7,-0.12392469042444401,-0.15552271347970037,-0.23491865141630233,0.011473030768427983,2,5,0.125,0.9453125,0.15625,seven spatial-heterogeneity endpoints,0.175
+axis_mad,spatial_heterogeneity,APA vs adjacent cortex,7,-0.07075242612015566,-0.08598722987201457,-0.1191979298807675,-0.0177866496264889,2,5,0.0625,0.9765625,0.078125,seven spatial-heterogeneity endpoints,0.175
+axis_p90_minus_p10,spatial_heterogeneity,APA vs adjacent cortex,7,-0.1738886122591139,-0.20899781774031645,-0.32830047922727496,-0.0017441322206714954,1,6,0.109375,0.953125,0.109375,seven spatial-heterogeneity endpoints,0.175
+spatial_block_iqr_g3,spatial_heterogeneity,APA vs adjacent cortex,7,-0.06631440267369361,-0.14240674543169884,-0.17746249912351,0.062208013652615364,2,5,0.328125,0.84375,0.375,seven spatial-heterogeneity endpoints,0.328125
+spatial_block_iqr_g4,spatial_heterogeneity,APA vs adjacent cortex,7,-0.12842745381633222,-0.12497985907757075,-0.2079970963070724,-0.0513897670507898,1,6,0.03125,0.9921875,0.03125,seven spatial-heterogeneity endpoints,0.175
+spatial_block_iqr_g5,spatial_heterogeneity,APA vs adjacent cortex,7,-0.15651528769680928,-0.15766646811037988,-0.28359749467853207,-0.027492659880030364,1,6,0.078125,0.96875,0.109375,seven spatial-heterogeneity endpoints,0.175
+moran_i_k6,spatial_heterogeneity,APA vs adjacent cortex,7,-0.10838978380475187,-0.1709850208429488,-0.19766476347849585,0.02174828190257774,1,6,0.171875,0.921875,0.296875,seven spatial-heterogeneity endpoints,0.20052083333333334

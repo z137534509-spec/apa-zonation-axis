@@ -1,7 +1,7 @@
-# Required manuscript update after GitHub upload
+# BMC revision code-availability statement
 
-The repository is publicly accessible. Replace the current code-availability statement with:
+Use the tagged snapshot associated with this update in the manuscript:
 
-Code availability. The analysis code and reproducibility instructions are available at https://github.com/z137534509-spec/apa-zonation-axis (release v1.0.1; archived DOI may be added after Zenodo archival).
+Code availability. Analysis code, the pinned software environment, and reproducibility instructions are available at https://github.com/z137534509-spec/apa-zonation-axis (tag `bmc-genomics-20260803`).
 
-The submitted manuscript must use the public URL above rather than a placeholder.
+The tag is pushed with the BMC revision. A Zenodo DOI may be added if the repository owners later enable archival integration.

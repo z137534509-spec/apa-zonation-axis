@@ -1,0 +1,2 @@
+﻿dataset,standardization_scope,metric,comparison,n_pairs,mean_delta,median_delta,ci95_low,ci95_high,n_positive,n_negative,exact_sign_flip_two_sided_p,exact_sign_flip_greater_p,wilcoxon_p,exact_sign_flip_two_sided_fdr
+GSE60042,source-defined_standardization,ZG_intermediate_vs_ZF_ZR_axis_score,APA vs AAG,7,1.099865011990612,1.012476040976332,0.6330023474987813,1.6340981745414678,7,0,0.015625,0.0078125,0.015625,0.015625
