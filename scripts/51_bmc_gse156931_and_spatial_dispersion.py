@@ -395,8 +395,8 @@ def make_primary_spatial_figure(section_summary: pd.DataFrame) -> None:
     sns.set_theme(style="whitegrid", context="paper")
     fig, axes = plt.subplots(1, 2, figsize=(8.5, 4.2), sharey=True)
     primary = section_summary.rename(columns={"patient": "case", "axis_mean": "value"})[["case", "tissue", "value"]]
-    paired_line_plot(axes[0], primary, "value", "A. Reference-defined primary axis", "APA", "Adjacent")
-    axes[0].set_ylabel("Section mean zonation-axis score")
+    paired_line_plot(axes[0], primary, "value", "A. Curated primary composite", "APA", "Adjacent")
+    axes[0].set_ylabel("Section mean composite score")
     cyp_free = section_summary.rename(columns={"patient": "case", "axis_mean_CYP11B2_free": "value"})[["case", "tissue", "value"]]
     paired_line_plot(axes[1], cyp_free, "value", "B. CYP11B2-free sensitivity", "APA", "Adjacent")
     axes[1].set_ylabel("")
@@ -416,7 +416,7 @@ def make_external_figure(
     sns.set_theme(style="whitegrid", context="paper")
     fig, axes = plt.subplots(1, 3, figsize=(12.8, 4.2), gridspec_kw={"width_ratios": [1, 1, 1.15]})
     paired_line_plot(axes[0], gse60042_scores, PRIMARY_AXIS, "A. GSE60042 (n=7 pairs)", "APA", "AAG")
-    axes[0].set_ylabel("Reference-defined zonation-axis score")
+    axes[0].set_ylabel("Curated composite score")
     paired_line_plot(axes[1], gse156_scores[gse156_scores["paired_apa_aag"]], PRIMARY_AXIS, "B. GSE156931 (n=8 pairs)", "APA", "AAG")
     axes[1].set_ylabel("")
 
@@ -442,8 +442,8 @@ def make_external_figure(
     axes[2].set_xlabel("APA minus AAG mean paired difference\n(descriptive bootstrap 95% CI)")
     axes[2].set_title("C. Independent paired cohorts", fontsize=10)
     fig.tight_layout()
-    fig.savefig(FIGURES / "Figure_5_external_paired_cohort_transfer.png", dpi=400, bbox_inches="tight")
-    fig.savefig(FIGURES / "Figure_5_external_paired_cohort_transfer.pdf", bbox_inches="tight")
+    fig.savefig(FIGURES / "Figure_5_external_paired_cohort_concordance.png", dpi=400, bbox_inches="tight")
+    fig.savefig(FIGURES / "Figure_5_external_paired_cohort_concordance.pdf", bbox_inches="tight")
     plt.close(fig)
 
 
@@ -452,7 +452,7 @@ def make_spatial_figure(section_summary: pd.DataFrame, section_tests: pd.DataFra
     fig, axes = plt.subplots(1, 3, figsize=(13.2, 4.2))
     location = section_summary.rename(columns={"patient": "case", "axis_mean": "value"})[["case", "tissue", "value"]]
     paired_line_plot(axes[0], location, "value", "A. Lesion-level location", "APA", "Adjacent")
-    axes[0].set_ylabel("Section mean zonation-axis score")
+    axes[0].set_ylabel("Section mean composite score")
     dispersion = section_summary.rename(columns={"patient": "case", "axis_iqr": "value"})[["case", "tissue", "value"]]
     paired_line_plot(axes[1], dispersion, "value", "B. Spot-score dispersion", "APA", "Adjacent")
     axes[1].set_ylabel("Section axis-score IQR")
@@ -461,6 +461,9 @@ def make_spatial_figure(section_summary: pd.DataFrame, section_tests: pd.DataFra
         row = section_tests.loc[section_tests["metric"].eq(f"spatial_block_iqr_g{grid_size}")].iloc[0]
         regional_rows.append({"grid": f"{grid_size}×{grid_size}", "mean_delta": row["mean_delta"], "ci_low": row["ci95_low"], "ci_high": row["ci95_high"]})
     regional = pd.DataFrame(regional_rows)
+    # Assign the display labels separately to avoid inheriting a malformed
+    # multiplication glyph from an earlier text conversion.
+    regional["grid"] = [f"{grid_size}×{grid_size}" for grid_size in GRID_SIZES]
     positions = np.arange(regional.shape[0])
     axes[2].errorbar(
         regional["mean_delta"], positions,

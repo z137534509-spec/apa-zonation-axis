@@ -1,0 +1,2 @@
+﻿dataset,tumour_roi_available,pathology_annotation_available,primary_spatial_estimand,restriction_not_performed_reason
+GSE274314,False,False,all in_tissue spots summarized to the GEO-labelled APA or adjacent-cortex section,The public archive contains section images and coordinates but no returned blinded pathology/tumour ROI mask. Transcript-defined ROIs were not used because they would be circular for this score.

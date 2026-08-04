@@ -1,7 +1,7 @@
 {
-  "title": "Patient-paired cortical-program shift in aldosterone-producing adenoma",
-  "version": "2026.08.04.2",
-  "description": "Executable analysis code and compact machine-readable results for a patient-paired, reference-defined transcriptomic analysis of aldosterone-producing adenomas.",
+  "title": "Patient-paired APA composite-score reanalysis",
+  "version": "2026.08.04.3",
+  "description": "Executable code and compact machine-readable results for a transparent curated, patient-paired four-module transcriptomic composite-score reanalysis of aldosterone-producing adenomas. The archive includes module membership and overlap weights, cross-platform coverage, gene/module removal sensitivities, and section-level spatial quality-control outputs.",
   "creators": [
     {"name": "Zhang, Hongjie"},
     {"name": "Yang, Lianjun"},

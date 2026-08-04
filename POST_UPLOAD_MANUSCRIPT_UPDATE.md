@@ -1,7 +1,5 @@
-# BMC revision code-availability statement
+# Manuscript code-availability statement
 
-Use the tagged snapshot associated with this update in the manuscript:
+Use the immutable release tag `bmc-genomics-20260804.3` and its Zenodo DOI in the manuscript.
 
-Code availability. Analysis code, the pinned software environment, and reproducibility instructions are available at https://github.com/z137534509-spec/apa-zonation-axis (tag `bmc-genomics-20260803`).
-
-The tag is pushed with the BMC revision. A Zenodo DOI may be added if the repository owners later enable archival integration.
+Code availability. Analysis code, the pinned software environment, project homepage, MIT license, and compact reproducibility outputs are available through the public GitHub release and its Zenodo archive. The repository contains no raw or processed expression data; public inputs must be obtained from GEO and the referenced Zenodo records.
