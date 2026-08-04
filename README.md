@@ -41,4 +41,4 @@ The exact sign-flip test enumerates every possible sign assignment of observed p
 
 ## Versioning and citation
 
-The tagged BMC story-revision snapshot is archived through Zenodo from GitHub release `bmc-genomics-20260804.4`. This README and `.zenodo.json` identify the matching code, release tables, software version, license, and input requirements.
+The tagged BMC story-revision snapshot is archived in Zenodo as [10.5281/zenodo.21789851](https://doi.org/10.5281/zenodo.21789851), corresponding to GitHub release `bmc-genomics-20260804.4`. This README and `.zenodo.json` identify the matching code, release tables, software version, license, and input requirements.
