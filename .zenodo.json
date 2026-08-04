@@ -1,12 +1,15 @@
 {
   "title": "Patient-paired cortical-program shift in aldosterone-producing adenoma",
+  "version": "2026.08.04.2",
   "description": "Executable analysis code and compact machine-readable results for a patient-paired, reference-defined transcriptomic analysis of aldosterone-producing adenomas.",
   "creators": [
     {"name": "Zhang, Hongjie"},
     {"name": "Yang, Lianjun"},
     {"name": "Xu, Dan"}
   ],
-  "license": "MIT",
+  "license": "mit",
+  "access_right": "open",
+  "language": "eng",
   "keywords": ["primary aldosteronism", "aldosterone-producing adenoma", "adrenal zonation", "spatial transcriptomics", "patient-paired analysis"],
   "upload_type": "software"
 }
