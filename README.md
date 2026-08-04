@@ -42,4 +42,4 @@ The BMC script reads the outputs of steps 1 and 2. It reports descriptive paired
 
 ## Versioning and citation
 
-Use the GitHub Release matching the manuscript submission for a versioned code snapshot. A `.zenodo.json` metadata file is included to prepare archival; the repository still requires a Zenodo archive DOI before formal journal submission.
+The BMC submission snapshot is archived in Zenodo at [10.5281/zenodo.21784252](https://doi.org/10.5281/zenodo.21784252), corresponding to GitHub release `bmc-genomics-20260804.2`. The repository includes `.zenodo.json` metadata and a SHA-256 manifest for reproducibility checks.
