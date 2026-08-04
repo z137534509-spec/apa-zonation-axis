@@ -442,8 +442,8 @@ def make_external_figure(
     axes[2].set_xlabel("APA minus AAG mean paired difference\n(descriptive bootstrap 95% CI)")
     axes[2].set_title("C. Independent paired cohorts", fontsize=10)
     fig.tight_layout()
-    fig.savefig(FIGURES / "Figure_5_external_paired_cohort_concordance.png", dpi=400, bbox_inches="tight")
-    fig.savefig(FIGURES / "Figure_5_external_paired_cohort_concordance.pdf", bbox_inches="tight")
+    fig.savefig(FIGURES / "Figure_6_external_paired_cohort_concordance.png", dpi=400, bbox_inches="tight")
+    fig.savefig(FIGURES / "Figure_6_external_paired_cohort_concordance.pdf", bbox_inches="tight")
     plt.close(fig)
 
 
@@ -476,8 +476,8 @@ def make_spatial_figure(section_summary: pd.DataFrame, section_tests: pd.DataFra
     axes[2].set_ylabel("Grid resolution")
     axes[2].set_title("C. Regional-dispersion sensitivity", fontsize=10)
     fig.tight_layout()
-    fig.savefig(FIGURES / "Figure_4_spatial_location_and_dispersion.png", dpi=400, bbox_inches="tight")
-    fig.savefig(FIGURES / "Figure_4_spatial_location_and_dispersion.pdf", bbox_inches="tight")
+    fig.savefig(FIGURES / "Figure_5_spatial_location_and_dispersion.png", dpi=400, bbox_inches="tight")
+    fig.savefig(FIGURES / "Figure_5_spatial_location_and_dispersion.pdf", bbox_inches="tight")
     plt.close(fig)
 
 

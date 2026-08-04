@@ -1,6 +1,6 @@
 # Patient-paired APA composite-score reanalysis
 
-Executable analysis code and compact machine-readable results for the BMC Genomics submission, *Patient-paired transcriptomic analyses identify higher ZG/intermediate-to-ZF/ZR composite scores in aldosterone-producing adenomas*.
+Executable analysis code and compact machine-readable results for the BMC Genomics submission, *Patient-paired transcriptomics reveals a reproducible cortical-program shift in aldosterone-producing adenomas*.
 
 ## Scope and interpretation boundary
 
@@ -8,7 +8,7 @@ This repository contains analysis code, a pinned software environment, and selec
 
 The primary endpoint is a transparent curated four-module composite: mean(ZG/aldosterone, intermediate steroidogenic) minus mean(ZF/cortisol, ZR/androgen). The patient pair, never an individual spatial spot, is the inferential unit. Exact panel membership, overlaps, and effective composite weights are exported in the release tables.
 
-The panel was manually curated after project initiation and frozen for this release; it was not preregistered. It does not use target-cohort APA-versus-control differential expression, label transfer, or a target-cohort gene-selection threshold. All score-based results should therefore be interpreted as exploratory tissue-level associations, not as evidence of tumor-cell intrinsic reprogramming, histological zonation, lineage, steroid output, or causality.
+The panel was manually curated after project initiation for this release and was not preregistered. It does not use target-cohort APA-versus-control differential expression, label transfer, or a target-cohort gene-selection threshold. The composite captures a recurring patient-paired tissue-level direction that is anchored most consistently by higher ZG and lower ZR programs; it does not establish tumor-cell-intrinsic reprogramming, histological zonation, lineage, steroid output, or causality.
 
 ## Data sources
 
@@ -41,4 +41,4 @@ The exact sign-flip test enumerates every possible sign assignment of observed p
 
 ## Versioning and citation
 
-The tagged BMC submission snapshot is archived in Zenodo as [10.5281/zenodo.21787456](https://doi.org/10.5281/zenodo.21787456), corresponding to GitHub release `bmc-genomics-20260804.3`. This README and `.zenodo.json` identify the matching code, release tables, software version, license, and input requirements.
+The tagged BMC story-revision snapshot is archived through Zenodo from GitHub release `bmc-genomics-20260804.4`. This README and `.zenodo.json` identify the matching code, release tables, software version, license, and input requirements.

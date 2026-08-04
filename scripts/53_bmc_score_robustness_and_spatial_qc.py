@@ -406,8 +406,8 @@ def make_module_figure(tests: pd.DataFrame) -> None:
     axes[0].set_ylabel("Curated module")
     fig.suptitle("Module-level patient-paired effects", fontsize=12.3, fontweight="bold", y=1.02)
     fig.tight_layout()
-    fig.savefig(FIGURES / "Figure_6_module_level_paired_effects.png", dpi=450, bbox_inches="tight")
-    fig.savefig(FIGURES / "Figure_6_module_level_paired_effects.pdf", bbox_inches="tight")
+    fig.savefig(FIGURES / "Figure_4_module_level_paired_effects.png", dpi=450, bbox_inches="tight")
+    fig.savefig(FIGURES / "Figure_4_module_level_paired_effects.pdf", bbox_inches="tight")
     plt.close(fig)
 
 
